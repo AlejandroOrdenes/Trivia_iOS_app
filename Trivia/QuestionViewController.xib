@@ -30,6 +30,9 @@
                     <state key="normal" image="checkmark.circle.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="150" scale="large"/>
                     </state>
+                    <connections>
+                        <action selector="trueQuestion:" destination="-1" eventType="touchUpInside" id="lVj-sd-QK1"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjY-hS-jbr">
                     <rect key="frame" x="241" y="676" width="150" height="150"/>
@@ -41,6 +44,9 @@
                     <state key="normal" image="xmark.circle.fill" catalog="system">
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="150" scale="large"/>
                     </state>
+                    <connections>
+                        <action selector="wrongQuestion:" destination="-1" eventType="touchUpInside" id="X6T-PN-9qy"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿La capital de Chile es Valparaiso?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3W-q1-M4h">
                     <rect key="frame" x="20" y="243" width="388" height="233"/>
