@@ -45,8 +45,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         showQuestions(for: viewModel.getCategory(at: indexPath.row))
-        print(viewModel.getCategory(at: indexPath.row).name)
-        print(viewModel.getCategory(at: indexPath.row).id)
+        
         
 
     }

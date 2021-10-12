@@ -8,13 +8,16 @@
 import Foundation
 
 
-struct QuestionsJson: Codable {
-
-        var category: String
-        var type: String
-        var difficulty: String
-        var question: String
-        var correct_answer: String
-        var incorrect_answers: [String]
-
+struct Question: Decodable {
+    var results: [QuestionJson]
 }
+
+struct QuestionJson: Decodable {
+    let category: String
+    let type: String
+    let difficulty: String
+    let question: String
+    let correct_answer: String
+    let incorrect_answers: [String]
+}
+

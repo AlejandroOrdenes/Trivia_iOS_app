@@ -9,7 +9,7 @@ import Foundation
 
 class QuestionViewModel {
     let questionsService: QuestionsService
-    var questions = [QuestionsJson]()
+    var questions = [QuestionJson]()
     var currentQuestionIndex = 0
 
     init(service: QuestionsService) {
@@ -19,7 +19,7 @@ class QuestionViewModel {
     func getQuestionsServ(completion: @escaping () -> Void) {
         questionsService.getQuestionsJSON {
         questions in
-        self.questions = questions
+            self.questions = questions
             return completion()
            }
         }
@@ -31,10 +31,12 @@ class QuestionViewModel {
         }
         
         func questionsCount() -> Int {
+            
             return questions.count
         }
         
-        func getQuestion(at index: Int) -> QuestionsJson {
+        func getQuestion(at index: Int) -> QuestionJson {
+            
             questions[index]
         }
     

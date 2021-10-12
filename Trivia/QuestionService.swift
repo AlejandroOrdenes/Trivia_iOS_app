@@ -11,13 +11,13 @@ import Alamofire
 
 class QuestionsService {
 
-   struct Question: Codable {
-        var response_code: Int
-        var arreglo: [QuestionsJson]
-    }
+//   struct Question: Codable {
+//        var response_code: Int
+//        var arreglo: [QuestionsJson]
+//    }
     let apiClient = AlamofireAPIClient()
 
-    func getQuestionsJSON(completion: @escaping ([QuestionsJson]) -> Void) {
+    func getQuestionsJSON(completion: @escaping ([QuestionJson]) -> Void) {
         let questionsURL = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=boolean"
         apiClient.get(url: questionsURL) { response in
             switch response {
@@ -26,12 +26,13 @@ class QuestionsService {
                 do {
                     if let data = data {
                         let questions = try JSONDecoder().decode(Question.self, from: data)
-                        completion(questions.arreglo)
-                        print(questions.arreglo)
+                        completion(questions.results)
+                        print(questions.results)
+                        
                     }
                 } catch {
                     completion([])
-                    print("Fallo1!!")
+                    print("Fallo!!")
                 }
             case .failure(_):
                 completion([])

@@ -73,7 +73,7 @@ class QuestionViewController: UIViewController {
     private func setQuestion(question: String) {
         
         QuestionLabel.text = question
-        print()
+       
     }
     
     private func validateCurrentQuestion(answer: String) -> Bool {
